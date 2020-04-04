@@ -1,0 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+
+<%
+	session.removeAttribute("gusetName");
+	session.removeAttribute("gusetEmail");
+	response.sendRedirect("../main.jsp");	
+%>

@@ -1,0 +1,65 @@
+package order;
+
+import java.util.ArrayList;
+
+public class OrderManager {
+
+	private static OrderManager _orderManager;
+	private OrderManager(){}
+	public static OrderManager getOrderManager(){
+		if(_orderManager==null){
+			_orderManager=new OrderManager();
+		}
+		return _orderManager;
+	}
+
+	/*
+	 * 주문 생성(DAO의 주문생성 method를 호출)
+	 */
+	public int create(OrderDTO order) throws Exception{
+		int rows = getOrderDAO().create(order);
+		return rows;
+	}
+	/*
+	 *  주문 수정(DAO의 주문수정 method를 호출)
+	 */
+	public int update(OrderDTO order) throws Exception{
+		int	rows = getOrderDAO().update(order);
+		return rows;
+	}
+	
+	/*
+	 *  주문 삭제(DAO의 주문삭제 method를 호출)
+	 */
+	public int remove(int order_no) throws Exception{
+		int rows = getOrderDAO().remove(order_no);
+		return rows;
+	}
+	
+	/*
+	 * 	order 보기(DAO의 order찾기 method를 호출)
+	 */
+	public OrderDTO findOrder(int order_no) throws Exception{
+		OrderDTO order = getOrderDAO().findOrder(order_no);
+		return order;
+	}
+	
+	/*
+	 *  전체 order list 보기(DAO의 전체 order list method를 호출)
+	 */
+	public ArrayList<OrderDTO> findOrderList() throws Exception{
+		ArrayList<OrderDTO> list = getOrderDAO().findOrderList();
+		return list;
+	}
+	
+	/*
+	 * OrderDAO 객체 반환
+	 */
+	private OrderDAO getOrderDAO(){
+		return OrderDAO.getOrderDAO();
+	}
+
+
+
+
+}
