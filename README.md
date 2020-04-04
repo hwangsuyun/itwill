@@ -2,6 +2,7 @@
 
 -----------------------------------------------------------
 android
+
 It is ITWILL's academy classes project for Android
 
 1. pension project shows Korean pension information
@@ -10,6 +11,7 @@ It is ITWILL's academy classes project for Android
 -----------------------------------------------------------
 -----------------------------------------------------------
 pureJava
+
 It is ITWILL's academy classes project for Java
 
 1. pureJava project control Member object that basic c.r.u.d to database
