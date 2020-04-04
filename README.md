@@ -1,21 +1,36 @@
 # ITWILL
 # It is ITWILL's academy classes project.
 -----------------------------------------------------------
-android
+pension
 
-1. pension project shows Korean pension information.
+pension project shows Korean pension information
+- it was android project
+-----------------------------------------------------------
+-----------------------------------------------------------
+coffee
 
-2. coffee project shows Starbucks Coffee Korea information.
+coffee project shows Starbucks Coffee Korea information.
+ - it was android project
 -----------------------------------------------------------
 -----------------------------------------------------------
 pureJava
 
-1. pureJava project control Member object that basic c.r.u.d to database.
+pureJava project control Member object that basic c.r.u.d to database.
+ - it was pojo project
 -----------------------------------------------------------
 -----------------------------------------------------------
 IamPet
 
-1. IamPet project is online pet(cats) shopping mall.
+IamPet project is online pet(cats) shopping mall.
+ - it was web project
 -----------------------------------------------------------
+
+-----------------------------------------------------------
+shoesShop
+
+shoesShop project is online shoes shopping mall.
+ - it was web project
+-----------------------------------------------------------
+
 
 - It was made in 2014
