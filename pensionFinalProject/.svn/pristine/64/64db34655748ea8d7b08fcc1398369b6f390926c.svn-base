@@ -1,0 +1,55 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+	pageEncoding="EUC-KR"%>
+
+<script type="text/javascript">
+function doTooltip(evt,num,img,txt,tipBgColor,tipFontColor) {
+
+	
+	/* var tip = startStr + img + midStr + '<span style="font-family:' + tipFontFamily + '; font-size:' + tipFontSize + '; color:' + curFontColor + ';">' + txt + '</span>' + endStr;
+	tipcss.backgroundColor = curBgColor;
+	tooltip.innerHTML = tip;
+	}
+	if (!tipFollowMouse) positionTip(evt);
+	else t1=setTimeout("tipcss.visibility='visible'",100); */
+}
+
+
+</script>
+
+
+	<table width='100%' border='0' cellspacing='0' cellpadding='0'>
+		<tr>
+			<h4>제주도</h4>
+		</tr>
+		
+		<tr>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<td width='138' height='200%' align='center'><a href=''
+				target='_blank'> <img src='images/pension/jeju/natural.jpg'
+					width='50%' height='88'></a><br>자연하우스펜션<br>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<tr>
+			<td width='138' height='88' align='center'><a href=''
+				target='_blank'> <img src='images/pension/jeju/pastelpen.jpg'
+					width='138' height='88'></a><br>제주 파스텔펜션<br>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		</tr>
+		<tr>
+			<td width='138' height='88' align='center'><a href=''
+				target='_blank'> <img src='images/pension/jeju/dhdktltm.jpg'
+					width='138' height='88'></a><br>뉴오아시스<br>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		</tr>
+		<tr>
+			<td width='138' height='88' align='center'><a href=''
+				target='_blank'> <img src='images/pension/jeju/min2007.jpg'
+					width='138' height='88'></a><br>바다그리기펜션<br>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		</tr>
+		<tr>
+			<td width='138' height='88' align='center'><a href=''
+				target='_blank'> <img src='images/pension/jeju/jungdown.jpg'
+					width='138' height='88'></a><br>제주 정다운펜션<br>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		</tr>
+		<tr>
+			<td width='138' height='88' align='center'><a href=''
+				target='_blank'> <img src='images/pension/jeju/jejuolive.jpg'
+					width='138' height='88'></a><br>제주올리브펜션<br>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		</tr>
+	</table>

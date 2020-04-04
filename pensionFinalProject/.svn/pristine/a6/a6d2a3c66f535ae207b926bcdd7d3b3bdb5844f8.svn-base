@@ -1,0 +1,113 @@
+package com.itwill.member;
+
+import java.util.List;
+import java.util.Locale;
+
+import org.springframework.beans.BeansException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+import org.springframework.web.context.ContextLoader;
+
+//유저서비스의 구현 객체
+public class MemberServiceImpl implements MemberService, ApplicationContextAware {
+
+	private MemberDao memberDao;
+	private String serviceName;
+
+	public MemberServiceImpl() {
+		System.out.println("#### MemberServiceImpl() : 디폴트생성자호출");
+
+	}
+
+	public MemberServiceImpl(MemberDao memberDao) {
+		this.memberDao = memberDao;
+		System.out.println("#### MemberServiceImpl(MemberDao memberDao) : 생성자호출");
+	}
+
+	public MemberDao getMemberDao() {
+		return memberDao;
+	}
+
+	public void setMemberDao(MemberDao memberDao) {
+		System.out
+				.println("#### MemberServiceImpl : setMemberDao(memberDao)");
+		this.memberDao = memberDao;
+	}
+
+	public String getServiceName() {
+		return serviceName;
+	}
+
+	public void setServiceName(String serviceName) {
+		System.out
+				.println("#### MemberServiceImpl : setServiceName(String serviceName)::"
+						+ serviceName);
+		this.serviceName = serviceName;
+	}
+
+	
+	
+	
+	public int create(Member member) throws ExistedUserException,Exception{
+		
+		if(getMemberDao().existedUser(member.getId())){
+			
+			//properties 사용 방법1--------------2013.06.14
+			String msg = ContextLoader.getCurrentWebApplicationContext()
+					.getMessage("member.existed.exception",
+								new Object[]{member.getId()},
+								"잘모르는 에러[property key 없네요] ",
+								Locale.getDefault());
+			throw new ExistedUserException(msg); 
+			//com.itwill13.spring.properties 참고 : properties 이용 국제화 함
+			//throw new ExistedUserException(user.getUserId()+" 는 이미존재하는 아이디입니다."); 
+		}
+		return memberDao.create(member);
+	}
+	//ContextLoader 없이도 ApplicationContext 사용 할 수 있다.
+	//properties 사용 방법2--------------2013.06.14
+	ApplicationContext appContext; //이렇게 해도 됨. injection 해서 쓰면..
+	
+	
+	
+	@Override
+	public void setApplicationContext(ApplicationContext arg0)
+			throws BeansException {
+		appContext=arg0;
+		
+	} 
+
+	
+	/*
+	 * 로그인
+	 */
+	public Member login(String id, String passwd)
+			throws MemberNotFoundException, PasswordMismatchException, Exception {
+		System.out.println("#### MemberServiceImpl : login() 호출");
+		// 입력되는 아이디로 User 찾아오기
+		// ??????????????????????
+		Member member = null;
+		try {
+			member = memberDao.findMember(id);
+		} catch (Exception e) {
+			// ??????????????????????
+		}
+		if (member == null) {
+			throw new MemberNotFoundException(id + " 존재하지 않습니다.");
+		}
+		if (member.isMatchPassword(passwd) == false) {
+
+			throw new PasswordMismatchException("password 불일치");
+		}
+		return member;
+
+	}
+
+
+
+
+	
+
+	
+
+}

@@ -1,0 +1,157 @@
+package com.itwill.member;
+
+public class Member {
+
+	private String id;//아이디
+	private String passwd;//비번
+	private String name;//이름
+	private String sex;//성별
+	private String birthday1;//생일1
+	private String birthday2;//생일2
+	private String birthday3;//생일3
+	private String birthday4;//생일4 양/음
+	private String email1;//이메일주소
+	private String email2;//이메일뒤에주소
+	private String cellphone1;//폰번호1
+	private String cellphone2;//폰번호2
+	private String cellphone3;//폰번호3
+
+	public Member() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Member(String id, String passwd, String name, String sex,
+			String birthday1, String birthday2, String birthday3,
+			String birthday4, String email1, String email2,  String cellphone1,
+			String cellphone2,	String cellphone3) {
+		super();
+		this.id = id;
+		this.passwd = passwd;
+		this.name = name;
+		this.sex = sex;
+		this.birthday1 = birthday1;
+		this.birthday2 = birthday2;
+		this.birthday3 = birthday3;
+		this.birthday4 = birthday4;
+		this.email1 = email1;
+		this.email2 = email2;
+		this.cellphone1 = cellphone1;
+		this.cellphone2 = cellphone2;
+		this.cellphone3 = cellphone3;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getPasswd() {
+		return passwd;
+	}
+
+	public void setPasswd(String passwd) {
+		this.passwd = passwd;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getSex() {
+		return sex;
+	}
+
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+
+	public String getBirthday1() {
+		return birthday1;
+	}
+
+	public void setBirthday1(String birthday1) {
+		this.birthday1 = birthday1;
+	}
+
+	public String getBirthday2() {
+		return birthday2;
+	}
+
+	public void setBirthday2(String birthday2) {
+		this.birthday2 = birthday2;
+	}
+
+	public String getBirthday3() {
+		return birthday3;
+	}
+
+	public void setBirthday3(String birthday3) {
+		this.birthday3 = birthday3;
+	}
+
+	public String getBirthday4() {
+		return birthday4;
+	}
+
+	public void setBirthday4(String birthday4) {
+		this.birthday4 = birthday4;
+	}
+
+	public String getEmail1() {
+		return email1;
+	}
+
+	public void setEmail1(String email1) {
+		this.email1 = email1;
+	}
+
+	public String getEmail2() {
+		return email2;
+	}
+
+	public void setEmail2(String email2) {
+		this.email2 = email2;
+	}
+
+	public String getCellphone1() {
+		return cellphone1;
+	}
+
+	public void setCellphone1(String cellphone1) {
+		this.cellphone1 = cellphone1;
+	}
+
+	public String getCellphone2() {
+		return cellphone2;
+	}
+
+	public void setCellphone2(String cellphone2) {
+		this.cellphone2 = cellphone2;
+	}
+
+	public String getCellphone3() {
+		return cellphone3;
+	}
+
+	public void setCellphone3(String cellphone3) {
+		this.cellphone3 = cellphone3;
+	}
+
+	public boolean isMatchPassword(String passwd){
+		boolean isMatch=false;
+		if(this.passwd.equals(passwd)){
+			isMatch=true;
+		}
+		return isMatch;
+	}
+	
+}
+
+

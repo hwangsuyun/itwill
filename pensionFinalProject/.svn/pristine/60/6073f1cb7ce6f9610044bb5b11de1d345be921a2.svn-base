@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+    
+    <%
+	
+	String memberId =(String)session.getAttribute("id");
+	
+	if(memberId != null){
+		out.println("<script>");
+		out.println("alert('고객님은 현재 로그인중입니다.');");
+		out.println("location.href='main.jsp';");
+		out.println("</script>");
+		return;
+	}
+	%>
+	
+
+ 
