@@ -1,0 +1,58 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+	pageEncoding="EUC-KR"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
+
+	<table width='100%' border='0' cellspacing='0' cellpadding='0'>
+		<tr>
+			<h4>${p_group}</h4>
+		</tr>
+		
+		<c:forEach var="pension" items="${pensionList}">
+		
+		<tr>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<td width='138' height='200%' align='center'><a href='${pension.p_site}'
+				target='_blank'> <img src='images/pension/${pension.p_image}.jpg'
+					width='250' height='88'></a><br>${pension.p_name}<br>
+					 <font size="2">${pension.p_address}<br>${pension.p_tel}</font>
+					&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		</tr>
+		</c:forEach>			
+					
+					
+		<!-- <tr>
+			<td width='138' height='88' align='center'><a href=''
+				target='_blank'> <img src='images/pension/jeju/pastelpen.jpg'
+					width='250' height='88'></a><br>제주 파스텔펜션<br>
+					<font size="2">제주도 제주시 도두1동 1871-1<br>연락처:064-713-7705</font>
+					&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		</tr>
+		<tr>
+			<td width='138' height='88' align='center'><a href=''
+				target='_blank'> <img src='images/pension/jeju/dhdktltm.jpg'
+					width='250' height='88'></a><br>뉴오아시스<br>
+					<font size="2">제주도 서귀포시 서호동 1470-3<br>연락처:064-739-2292</font>
+					&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		</tr>
+		<tr>
+			<td width='138' height='88' align='center'><a href=''
+				target='_blank'> <img src='images/pension/jeju/min2007.jpg'
+					width='250' height='88'></a><br>바다그리기펜션<br>
+					<font size="2">제주도 제주시 한림읍 협재리 1386번지<br>연락처:064-796-6840</font>
+					&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		</tr>
+		<tr>
+			<td width='138' height='88' align='center'><a href=''
+				target='_blank'> <img src='images/pension/jeju/jungdown.jpg'
+					width='250' height='88'></a><br>제주 정다운펜션<br>
+					<font size="2">제주도 제주시 삼양1동 1658-2<br>연락처:064-726-2455</font>
+					&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		</tr>
+		<tr>
+			<td width='138' height='88' align='center'><a href=''
+				target='_blank'> <img src='images/pension/jeju/jejuolive.jpg'
+					width='250' height='88'></a><br>제주올리브펜션<br>
+					<font size="2">제주도 남제주군 남원읍 남원리 1373번지<br>연락처:064-764-0505</font>
+					&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		</tr> -->
+	</table>
