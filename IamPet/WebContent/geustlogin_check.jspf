@@ -1,7 +1,0 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<%
-	String guestName = (String)session.getAttribute("g_name");
-	String guestEmail = (String)session.getAttribute("g_email");
-	
-%>   
