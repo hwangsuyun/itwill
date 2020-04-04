@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapActivity" >
+
+     <fragment
+         android:id="@+id/map"
+         android:layout_width="fill_parent"
+         android:layout_height="match_parent"
+         android:layout_above="@+id/editText1"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentTop="true"
+         class="com.google.android.gms.maps.SupportMapFragment" />
+
+     <TextView
+         android:id="@+id/textView1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBaseline="@+id/editText1"
+         android:layout_alignBottom="@+id/editText1"
+         android:layout_alignParentLeft="true"
+         android:text="주소검색"
+         android:textSize="20dp" />
+
+     <Button
+         android:id="@+id/button1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBottom="@+id/textView1"
+         android:layout_alignParentRight="true"
+         android:text="검색" />
+
+     <EditText
+         android:id="@+id/editText1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_toLeftOf="@+id/button1"
+         android:text="ex)경기도,강원도"
+         android:ems="8" >
+
+         <requestFocus />
+     </EditText>
+ 
+</RelativeLayout>
