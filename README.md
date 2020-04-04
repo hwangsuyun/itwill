@@ -24,11 +24,16 @@ IamPet
 IamPet project is online pet(cats) shopping mall.
  - it was web project
 -----------------------------------------------------------
-
 -----------------------------------------------------------
 shoesShop
 
 shoesShop project is online shoes shopping mall.
+ - it was web project
+-----------------------------------------------------------
+-----------------------------------------------------------
+pensionFinalProject
+
+pensionFinalProject project is online pension reservation.
  - it was web project
 -----------------------------------------------------------
 
