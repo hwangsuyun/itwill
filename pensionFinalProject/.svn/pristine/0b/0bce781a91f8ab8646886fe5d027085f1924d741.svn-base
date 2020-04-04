@@ -1,0 +1,20 @@
+create table member (
+id varchar2(20) CONSTRAINT PK_MEMBER PRIMARY KEY NOT NULL, 
+passwd varchar2(20) NOT NULL,
+name varchar2(20) NOT NULL,
+sex varchar2(20) NOT NULL,
+birthday1 varchar2(5) NOT NULL,
+birthday2 varchar2(5) NOT NULL,
+birthday3 varchar2(5) NOT NULL,
+birthday4 varchar2(5) NOT NULL,
+email1 varchar2(30) NOT NULL,
+email2 varchar2(30) NOT NULL,
+cellphone1 varchar2(5) NOT NULL,
+cellphone2 varchar2(5) NOT NULL,
+cellphone3 varchar2(5) NOT NULL);
+
+select * from member;
+
+insert into member values('user1','user1','윤상호','M','1987','09','23','M','un23e81','@naver.com','464800','서울','경안동 148-10','031','762','1111');
+
+select * from member;

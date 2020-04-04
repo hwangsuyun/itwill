@@ -1,0 +1,29 @@
+package com.itwill.member;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+
+public class MemberRowMapper implements RowMapper<Member> {
+
+	
+	public Member mapRow(ResultSet rs, int rowNo) throws SQLException {
+			return new Member(rs.getString("id"),
+						rs.getString("passwd"),
+						rs.getString("name"),
+						rs.getString("sex"),
+						rs.getString("birthday1"),
+						rs.getString("birthday2"),
+						rs.getString("birthday3"),
+						rs.getString("birthday4"),
+						rs.getString("email1"),
+						rs.getString("email2"),
+						rs.getString("cellphone1"),
+						rs.getString("cellphone2"),
+						rs.getString("cellphone3")
+						);
+
+	}
+
+}
